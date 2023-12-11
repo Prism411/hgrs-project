@@ -1,7 +1,7 @@
 # Luva Tradutora de Libras para Deficientes Auditivos
 
 ## Visão Geral
-A Luva Tradutora de Libras é um projeto inovador desenvolvido por estudantes da Universidade Federal de Rondônia (UNIR) com o objetivo de auxiliar deficientes auditivos na comunicação. A luva utiliza sensores para reconhecer gestos da Língua Brasileira de Sinais (Libras) e os traduz em texto ou voz, facilitando a interação dessas pessoas no dia a dia.
+A Luva Tradutora de Libras é um projeto inovador desenvolvido por estudantes da Universidade Federal de Rondônia (UNIR) com o objetivo de auxiliar deficientes auditivos na comunicação. A luva utiliza sensores para reconhecer gestos da Língua Brasileira de Sinais (Libras) e os traduz em texto, facilitando a interação dessas pessoas no dia a dia.
 
 ## Membros da Equipe
 - Andrey Riça
