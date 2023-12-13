@@ -7,8 +7,6 @@ A Luva Tradutora de Libras é um projeto inovador desenvolvido por estudantes da
 - Andrey Riça
 - Jáder Louis
 - Nicolas Sales
-- Samih Santos
-- Nicolas Sales
 - Wyllgner França
 
 ## Detalhes do Projeto
