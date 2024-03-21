@@ -76,7 +76,7 @@ void loop() {
     if (mindinho < 210 && anelar > 712 && meio > 712 && indicador > 712 && dedao < 210){
     Serial.println("M");
   }
-      if (mindinho < 210 && anelar < 210 && meio > 712 && indicador > 712 && dedao < 210){
+      if (mindinho < 210 && anelar < 210 && meio > 712 && indicador > 712 && dedao < 102){
     Serial.println("N");
   }
 
@@ -84,11 +84,54 @@ void loop() {
     Serial.println("O");
   }
 
+  //Serial.print("mindinho = ");
+  //Serial.println(mindinho);
+  //Serial.print("anelar = ");
+  //Serial.println(anelar);
+  //Serial.print("meio= ");
+  //Serial.println(meio);
+  //Serial.print("indicador= ");
+  //Serial.println(indicador);
+  //Serial.print("dedao= ");
+  //Serial.println(dedao);
 
   //Aqui ele precisa estar na vertical (deitado) (Conflito com K e H)
    if (mindinho < 210 && anelar < 210 && meio > 712 && indicador > 712 && (dedao > 210 && dedao < 620)){
     Serial.println("P");
   }
 
+    //Aqui ele precisa estar na vertical (deitado) (Conflito com K e H)
+   if (mindinho < 210 && anelar < 210 && meio < 210 && indicador > 712 && dedao > 712){
+    Serial.println("Q");
+  }
+
+      //Ajustar Isso aqui no futuro precisa ajustar verticalidade do dedão
+    if (mindinho < 210 && anelar < 210 && meio > 712 && indicador > 712 && (dedao < 307 && dedao > 102)){
+    Serial.println("R");
+  }
+if (mindinho < 210 && anelar < 210 && meio < 210 && indicador < 210 && (dedao <= 614 && dedao >= 410)){
+    Serial.println("S");
+  }
+  if (mindinho >= 717 && anelar <= 717 && meio <= 717 && indicador <= 205 && dedao <= 205 ){
+    Serial.println("T");
+  }
+  //1023,922,819,717,614,512,410,307,205,102,1
+
+  //dando conflito com P
+  if (mindinho <= 205 && anelar <= 205 && meio >= 819 && indicador >= 819 && (dedao <= 614 && dedao >= 410)){
+    Serial.println("U");
+  }
+  if (mindinho <= 205 && anelar <= 205 && meio >= 819 && indicador >= 819 && (dedao <= 205 && dedao >= 1)){
+    Serial.println("U");
+  }
+    if (mindinho <= 205 && anelar >= 922 && meio >= 922 && indicador >= 922 && dedao <= 102){
+    Serial.println("W");
+  }
+    if (mindinho <= 102 && anelar <= 102 && meio <= 102 && (indicador <= 717 && indicador >= 512) && dedao <= 102){
+    Serial.println("X");
+  }
+      if (mindinho >= 819 && anelar <= 102 && meio <= 102 && indicador <= 102  && dedao >= 819){
+    Serial.println("Y");
+  }
 
 }
