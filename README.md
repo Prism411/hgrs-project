@@ -3,6 +3,8 @@
 ## Visão Geral
 A Luva Tradutora de Libras é um projeto inovador desenvolvido por estudantes da Universidade Federal de Rondônia (UNIR) com o objetivo de auxiliar deficientes auditivos na comunicação. A luva utiliza sensores para reconhecer gestos da Língua Brasileira de Sinais (Libras) e os traduz em texto, facilitando a interação dessas pessoas no dia a dia.
 
+- Transportar dados para um smartphone
+
 ## Membros da Equipe
 - Andrey Riça @hakari1 https://github.com/hakari1
 - Jader Louis @Prism411 https://github.com/Prism411
