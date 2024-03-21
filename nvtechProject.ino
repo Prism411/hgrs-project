@@ -31,7 +31,7 @@ void loop() {
   if (mindinho > alto && anelar > alto && meio > alto && indicador > alto && dedao < medio){
     Serial.println("B");
   }
-  if ((mindinho > 210 && mindinho < 620) && (anelar > 210 && anelar < 620) && (meio > 210 && meio < 620) && (indicador > 210 && indicador < 620) && (dedao > 210 && dedao < 620)){
+  if ((mindinho > 400 && mindinho < 800) && (anelar > 400 && anelar < 800) && (meio > 400 && meio < 800) && (indicador > 400 && indicador < 800) && (dedao > 210 && dedao < 800)){
     Serial.println("C");
   }
     if ((mindinho > 210 && mindinho < 620) && (anelar > 210 && anelar < 620) && (meio > 210 && meio < 620) && (indicador > 620) && (dedao > 210 && dedao < 620)){
@@ -43,11 +43,11 @@ void loop() {
     if (mindinho > 712 && anelar > 712 && meio > 712 && indicador < 210 && dedao > 712){
     Serial.println("F");
   }
-    if (mindinho < 210 && anelar < 210 && meio < 210 && indicador > 712 && dedao > 712){
+    if (mindinho < 210 && anelar < 210 && meio < 210 && indicador > 712 && (dedao > 400 && dedao < 620)){
     Serial.println("G");
   }
 
-  //Ajustar Isso aqui no futuro (dedao)  (Mesma coisa de K)
+  //Ajustar Isso aqui no futuro (dedao)  (Mesma coisa de K) (Conflito com K e H)
     if (mindinho < 210 && anelar < 210 && meio > 712 && indicador > 712 && dedao > 550){
     Serial.println("H");
   }
@@ -62,11 +62,33 @@ void loop() {
     Serial.println("J");
   }
 
-    //Ajustar Isso aqui no futuro (dedao) (Mesma coisa de H)
+    //Ajustar Isso aqui no futuro (dedao) (Mesma coisa de H) (Conflito com K e H)
     if (mindinho < 210 && anelar < 210 && meio > 712 && indicador > 712 && dedao > 550){
     Serial.println("K");
   }
 
+
+    if (mindinho < 210 && anelar < 210 && meio < 210 && indicador > 800 && dedao > 820){
+    Serial.println("L");
+  }
+
+  
+    if (mindinho < 210 && anelar > 712 && meio > 712 && indicador > 712 && dedao < 210){
+    Serial.println("M");
+  }
+      if (mindinho < 210 && anelar < 210 && meio > 712 && indicador > 712 && dedao < 210){
+    Serial.println("N");
+  }
+
+  if ((mindinho > 200 && mindinho < 400) && (anelar > 210 && anelar < 420) && (meio > 210 && meio < 420) && (indicador > 210 && indicador < 420) && (dedao > 210 && dedao < 620)){
+    Serial.println("O");
+  }
+
+
+  //Aqui ele precisa estar na vertical (deitado) (Conflito com K e H)
+   if (mindinho < 210 && anelar < 210 && meio > 712 && indicador > 712 && (dedao > 210 && dedao < 620)){
+    Serial.println("P");
+  }
 
 
 }
