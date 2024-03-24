@@ -3,7 +3,7 @@ void setup() {
   pinMode(4, INPUT);
   Serial.begin(9600);
 }
-
+// criar um novo sensor pro dedao e implementar acelerometro.
 int medio = 210;
 int alto = 620;
 // medio 210~620
