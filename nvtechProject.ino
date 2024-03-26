@@ -133,5 +133,5 @@ if (mindinho < 210 && anelar < 210 && meio < 210 && indicador < 210 && (dedao <=
       if (mindinho >= 819 && anelar <= 102 && meio <= 102 && indicador <= 102  && dedao >= 819){
     Serial.println("Y");
   }
-  delay(1000);
+  delay(200);
 }
