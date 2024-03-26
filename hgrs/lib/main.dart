@@ -23,8 +23,8 @@ class _MyAppState extends State<MyApp> {
     _startFetchingLetters();
   }
 
-  void _startFetchingLetters() {
-    _timer = Timer.periodic(Duration(milliseconds: 2000), (timer) {
+  void _startFetchingLetters() {  
+    _timer = Timer.periodic(Duration(milliseconds: 200), (timer) {
       fetchLetter();
     });
   }
@@ -35,25 +35,34 @@ class _MyAppState extends State<MyApp> {
     super.dispose();
   }
 
-  void fetchLetter() async {
-    try {
-      final url = Uri.parse('http://localhost:8080'); // Ajuste conforme necessário
-      final response = await http.get(url);
-      if (response.statusCode == 200) {
-        final letter = response.body.trim();
-        if (letter != currentLetter) { // Verifica se a letra é diferente da atual antes de atualizar
-          setState(() {
-            currentLetter = letter;
-            sentence.add(currentLetter); // Adiciona a letra à frase
-          });
-        }
-      } else {
-        print('Falha ao carregar letra: ${response.statusCode}');
+ void fetchLetter() async {
+  try {
+    final url = Uri.parse('http://localhost:8080');
+    final response = await http.get(url);
+    if (response.statusCode == 200) {
+      final letter = response.body.trim();
+      // Verifica se a letra é válida e diferente da atual antes de atualizar
+      // Além disso, evita tratar entradas vazias ou espaços como letras válidas
+      if (letter.isNotEmpty && isLetter(letter) && letter != currentLetter) {
+        setState(() {
+          currentLetter = letter;
+          sentence.add(currentLetter); // Adiciona a letra válida à frase
+        });
       }
-    } catch (e) {
-      print('Erro ao fazer requisição: $e');
+    } else {
+      print('Falha ao carregar letra: ${response.statusCode}');
     }
+  } catch (e) {
+    print('Erro ao fazer requisição: $e');
   }
+}
+
+bool isLetter(String str) {
+  return str.isNotEmpty && str.runes.every((r) {
+    var char = String.fromCharCode(r);
+    return char.contains(RegExp(r'^[a-zA-Z]$'));
+  });
+}
 
   void addSpace() {
     setState(() {

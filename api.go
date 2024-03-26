@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"time"
+	"unicode"
 
 	"github.com/jacobsa/go-serial/serial"
 )
@@ -29,7 +30,15 @@ func sendLetterToServer(letter string) {
 
 var lastLetter string
 var lastLetterSent string
-var lastSendTime time.Time // Adiciona a variável para rastrear a última vez que uma letra foi enviada
+var lastSendTime time.Time
+
+// Verifica se a string contém apenas uma letra
+func isLetter(s string) bool {
+	if len(s) == 1 {
+		return unicode.IsLetter(rune(s[0]))
+	}
+	return false
+}
 
 func handleRequests(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
@@ -76,7 +85,7 @@ func main() {
 	}
 	defer port.Close()
 
-	lastSendTime = time.Now() // Inicializa lastSendTime
+	lastSendTime = time.Now()
 	buf := make([]byte, 128)
 	for {
 		n, err := port.Read(buf)
@@ -86,19 +95,13 @@ func main() {
 			}
 		}
 		if n > 0 {
-			letter := string(buf[:n])
-			fmt.Print(letter)
-			if letter != lastLetterSent || time.Since(lastSendTime) >= time.Second*5 {
-				sendLetterToServer(letter)
-				lastLetterSent = letter
-				lastSendTime = time.Now()
-			}
-		} else {
-			if time.Since(lastSendTime) >= time.Second*5 {
-				sendLetterToServer(lastLetterSent)
-				lastSendTime = time.Now()
-			}
+			data := string(buf[:n])
+			fmt.Print(data)
+			// Envia a letra (ou não-letra) assim que for lida, sem verificar se é igual à última ou o delay
+			sendLetterToServer(data)
+			lastLetterSent = data     // Atualiza a última letra enviada
+			lastSendTime = time.Now() // Atualiza o tempo da última transmissão (opcional, se você decidir usar depois)
 		}
-		time.Sleep(100 * time.Millisecond) // Adiciona um descanso para evitar uma sobrecarga de verificações
+		time.Sleep(100 * time.Millisecond) // Ajuste conforme necessário para controlar a taxa de leitura
 	}
 }
