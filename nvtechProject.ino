@@ -4,6 +4,7 @@ void setup() {
   Serial.begin(9600);
 }
 // criar um novo sensor pro dedao e implementar acelerometro.
+// acelerometro pode ser 3 potenciometros
 int medio = 210;
 int alto = 620;
 // medio 210~620
