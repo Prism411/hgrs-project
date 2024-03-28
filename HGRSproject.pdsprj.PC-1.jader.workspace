@@ -40,7 +40,7 @@
      <ITEM name="HexMode">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="258" x="108" flags="00000008" y="215" h="255" pid="3" iid="2">
+   <POPUP w="30" x="108" flags="00000008" y="215" h="16" pid="3" iid="2">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="128" flags="0000000a" y="235" h="1" pid="10" iid="2">
@@ -103,7 +103,7 @@
      <ITEM name="TopLineAddress">00000020</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="258" x="248" flags="00000008" y="355" h="255" pid="3" iid="3">
+   <POPUP w="30" x="248" flags="00000008" y="355" h="16" pid="3" iid="3">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="268" flags="0000000a" y="375" h="1" pid="10" iid="3">
@@ -166,7 +166,7 @@
      <ITEM name="TopLineAddress">00000020</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="258" x="388" flags="00000008" y="495" h="255" pid="3" iid="4">
+   <POPUP w="30" x="388" flags="00000008" y="495" h="16" pid="3" iid="4">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="408" flags="0000000a" y="515" h="1" pid="10" iid="4">
@@ -229,7 +229,7 @@
      <ITEM name="TopLineAddress">00000020</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="258" x="528" flags="00000008" y="635" h="255" pid="3" iid="5">
+   <POPUP w="30" x="528" flags="00000008" y="635" h="16" pid="3" iid="5">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="548" flags="0000000a" y="655" h="1" pid="10" iid="5">
@@ -292,7 +292,7 @@
      <ITEM name="TopLineAddress">00000020</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="258" x="668" flags="00000008" y="775" h="255" pid="3" iid="6">
+   <POPUP w="30" x="668" flags="00000008" y="775" h="16" pid="3" iid="6">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="688" flags="0000000a" y="795" h="1" pid="10" iid="6">
@@ -355,7 +355,7 @@
      <ITEM name="TopLineAddress">00000020</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="258" x="808" flags="00000008" y="915" h="255" pid="3" iid="1">
+   <POPUP w="30" x="808" flags="00000008" y="915" h="16" pid="3" iid="1">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="828" flags="0000000a" y="935" h="1" pid="10" iid="1">

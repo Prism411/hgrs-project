@@ -15,7 +15,7 @@ import (
 
 func sendLetterToServer(letter string) {
 	data := bytes.NewBufferString(letter)
-	resp, err := http.Post("http://localhost:8080", "text/plain", data)
+	resp, err := http.Post("http://192.168.100.3:8080", "text/plain", data)
 	if err != nil {
 		log.Printf("Failed to send request: %v", err)
 		return

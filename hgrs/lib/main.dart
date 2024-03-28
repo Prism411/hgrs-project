@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
 
  void fetchLetter() async {
   try {
-    final url = Uri.parse('http://localhost:8080');
+    final url = Uri.parse('http://192.168.100.3:8080');
     final response = await http.get(url);
     if (response.statusCode == 200) {
       final letter = response.body.trim();
@@ -55,7 +55,7 @@ class _MyAppState extends State<MyApp> {
   } catch (e) {
     print('Erro ao fazer requisição: $e');
   }
-}
+} 
 
 bool isLetter(String str) {
   return str.isNotEmpty && str.runes.every((r) {
